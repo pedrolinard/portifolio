@@ -3,7 +3,7 @@ import { GithubIcon, LinkedinIcon, MailIcon } from "./icons";
 export function Contact() {
   return (
     <section id="contato" className="mx-auto max-w-5xl px-6 py-20">
-      <div className="rounded-xl border-glow rounded-lg border border-border bg-surface px-8 py-14 text-center">
+      <div className="border-glow rounded-2xl border border-border bg-surface px-8 py-14 text-center">
         <p className="font-mono text-sm text-accent">04. contato</p>
         <h2 className="mt-3 text-2xl font-bold sm:text-4xl">
           Vamos conversar?
@@ -14,7 +14,8 @@ export function Contact() {
         </p>
         <a
           href="mailto:pedrolin4rd@gmail.com"
-          className="mt-8 inline-block rounded-md bg-accent px-6 py-3 font-mono text-sm font-medium text-background transition-opacity hover:opacity-90"
+          className="mt-8 inline-block rounded-[10px] bg-accent px-6 py-3 font-heading text-sm font-bold transition-[filter,transform] hover:-translate-y-0.5 hover:brightness-110"
+          style={{ color: "var(--fixed-white)" }}
         >
           pedrolin4rd@gmail.com
         </a>

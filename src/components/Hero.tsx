@@ -2,63 +2,81 @@ import { GithubIcon, LinkedinIcon, MailIcon } from "./icons";
 
 export function Hero() {
   return (
-    <section id="top" className="mx-auto max-w-5xl px-6 pb-20 pt-16 sm:pt-24">
-      <p className="font-mono text-sm text-accent">
-        <span className="cursor-blink">▍</span> olá, meu nome é
-      </p>
-      <h1 className="mt-4 text-4xl font-bold tracking-tight text-glow sm:text-6xl">
-        Pedro Linard
-      </h1>
-      <h2 className="mt-2 text-2xl font-semibold text-muted sm:text-4xl">
-        Desenvolvedor Back-End
-      </h2>
-      <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-        Estudante de ADS com foco em back-end, construindo APIs REST e
-        aplicações web com Java (Spring Boot) e Python (Django) — sempre
-        buscando arquitetura limpa, boas práticas e código organizado.
-      </p>
+    <section id="top" className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
+      <div className="grid items-center gap-10 sm:grid-cols-[1.15fr_0.85fr] sm:gap-14">
+        <div>
+          <p className="inline-flex items-center gap-2.5 font-mono text-xs uppercase tracking-[0.14em] text-accent">
+            <span className="h-0.5 w-7 rounded-full bg-accent" />
+            desenvolvedor back-end
+          </p>
 
-      <div className="mt-10 flex flex-wrap items-center gap-4">
-        <a
-          href="#projetos"
-          className="rounded-md bg-accent px-5 py-2.5 font-mono text-sm font-medium text-background transition-opacity hover:opacity-90"
-        >
-          Ver projetos
-        </a>
-        <a
-          href="#contato"
-          className="rounded-md border border-border px-5 py-2.5 font-mono text-sm text-foreground transition-colors hover:border-accent hover:text-accent"
-        >
-          Entrar em contato
-        </a>
-      </div>
+          <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+            Olá, eu sou <span className="text-accent text-glow">Pedro Linard</span>
+          </h1>
 
-      <div className="mt-10 flex items-center gap-5 text-muted">
-        <a
-          href="https://github.com/pedrolinard"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="GitHub"
-          className="transition-colors hover:text-accent"
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+            Estudante de ADS com foco em back-end, construindo APIs REST e
+            aplicações web com Java (Spring Boot) e Python (Django) — sempre
+            buscando arquitetura limpa, boas práticas e código organizado.
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <a
+              href="mailto:pedrolin4rd@gmail.com"
+              className="inline-flex items-center gap-2 rounded-[10px] bg-accent px-5 py-3 font-heading text-sm font-bold transition-[filter,transform] hover:-translate-y-0.5 hover:brightness-110"
+              style={{ color: "var(--fixed-white)" }}
+            >
+              Entrar em contato
+            </a>
+            <a
+              href="https://github.com/pedrolinard"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              className="grid h-11 w-11 place-items-center rounded-[10px] border border-border bg-surface text-foreground transition-[border-color,transform] hover:-translate-y-0.5 hover:border-accent"
+            >
+              <GithubIcon className="h-[19px] w-[19px]" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/pedrolinard/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="grid h-11 w-11 place-items-center rounded-[10px] border border-border bg-surface text-foreground transition-[border-color,transform] hover:-translate-y-0.5 hover:border-accent"
+            >
+              <LinkedinIcon className="h-[19px] w-[19px]" />
+            </a>
+            <a
+              href="mailto:pedrolin4rd@gmail.com"
+              aria-label="Email"
+              className="grid h-11 w-11 place-items-center rounded-[10px] border border-border bg-surface text-foreground transition-[border-color,transform] hover:-translate-y-0.5 hover:border-accent"
+            >
+              <MailIcon className="h-[19px] w-[19px]" />
+            </a>
+          </div>
+        </div>
+
+        <div
+          className="relative mx-auto grid aspect-square w-full max-w-[280px] place-items-center overflow-hidden rounded-full border-[3px]"
+          style={{
+            background: "var(--surface)",
+            borderColor: "var(--surface-2)",
+            boxShadow:
+              "0 0 0 4px var(--accent-soft), 0 30px 60px -20px var(--accent-glow)",
+          }}
         >
-          <GithubIcon className="h-5 w-5" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/pedrolinard/"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="LinkedIn"
-          className="transition-colors hover:text-accent"
-        >
-          <LinkedinIcon className="h-5 w-5" />
-        </a>
-        <a
-          href="mailto:pedrolin4rd@gmail.com"
-          aria-label="Email"
-          className="transition-colors hover:text-accent"
-        >
-          <MailIcon className="h-5 w-5" />
-        </a>
+          <span className="font-heading text-7xl font-bold text-accent">
+            PL
+          </span>
+          <span
+            aria-hidden
+            className="absolute inset-0 rounded-full"
+            style={{
+              background:
+                "radial-gradient(circle at 30% 20%, var(--accent-soft), transparent 60%)",
+            }}
+          />
+        </div>
       </div>
     </section>
   );

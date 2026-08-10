@@ -1,25 +1,42 @@
-const skillGroups = [
+type Skill = {
+  name: string;
+  hoverColor?: string;
+  glowColor?: string;
+};
+
+type SkillGroup = {
+  label: string;
+  items: Skill[];
+};
+
+const skillGroups: SkillGroup[] = [
   {
     label: "Linguagens",
-    items: ["Java", "Python"],
+    items: [
+      { name: "Java", hoverColor: "#ED8B00", glowColor: "rgba(237, 139, 0, 0.25)" },
+      { name: "Python", hoverColor: "#3776AB", glowColor: "rgba(55, 118, 171, 0.25)" },
+    ],
   },
   {
     label: "Back-end",
     items: [
-      "Spring Boot",
-      "Django",
-      "APIs REST",
-      "JPA",
-      "Arquitetura em camadas",
+      { name: "Spring Boot", hoverColor: "#6DB33F", glowColor: "rgba(109, 179, 63, 0.25)" },
+      { name: "Django", hoverColor: "#44B78B", glowColor: "rgba(68, 183, 139, 0.25)" },
+      { name: "APIs REST" },
+      { name: "JPA" },
     ],
   },
   {
-    label: "Dados & Redes",
-    items: ["Modelagem de banco de dados", "Redes de computadores"],
+    label: "Dados & redes",
+    items: [{ name: "Modelagem de BD" }, { name: "Redes de computadores" }],
   },
   {
     label: "Ferramentas",
-    items: ["Git", "IntelliJ IDEA", "VS Code"],
+    items: [
+      { name: "Git", hoverColor: "#F05032", glowColor: "rgba(240, 80, 50, 0.25)" },
+      { name: "IntelliJ IDEA", hoverColor: "#FE315D", glowColor: "rgba(254, 49, 93, 0.25)" },
+      { name: "VS Code", hoverColor: "#007ACC", glowColor: "rgba(0, 122, 204, 0.25)" },
+    ],
   },
 ];
 
@@ -35,16 +52,25 @@ export function Skills() {
         {skillGroups.map((group) => (
           <div
             key={group.label}
-            className="rounded-lg border border-border bg-surface p-5"
+            className="rounded-2xl border border-border bg-surface p-6"
           >
-            <h3 className="font-mono text-sm text-muted">{group.label}</h3>
-            <div className="mt-3 flex flex-wrap gap-2">
+            <h3 className="font-heading text-sm font-bold text-foreground">
+              {group.label}
+            </h3>
+            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
               {group.items.map((item) => (
                 <span
-                  key={item}
-                  className="rounded-full border border-border bg-surface-2 px-3 py-1 text-xs text-foreground"
+                  key={item.name}
+                  className="skill-chip flex items-center justify-center rounded-[10px] border border-border px-3 py-4 text-center text-xs font-semibold text-foreground"
+                  style={
+                    {
+                      background: "var(--surface-2)",
+                      "--chip-hover": item.hoverColor,
+                      "--chip-glow": item.glowColor,
+                    } as React.CSSProperties
+                  }
                 >
-                  {item}
+                  {item.name}
                 </span>
               ))}
             </div>
