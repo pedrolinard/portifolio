@@ -96,6 +96,15 @@ h3 {
   transform: translateY(-3px);
 }
 
+.skill-chip-icon {
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.skill-chip:hover .skill-chip-icon {
+  transform: scale(1.1);
+}
+
 @keyframes blink {
   0%,
   49% {
