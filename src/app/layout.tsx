@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Overpass, Overpass_Mono } from "next/font/google";
 import Script from "next/script";
+import { ScrollProgress } from "@/components/ScrollProgress";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -57,6 +58,7 @@ export default function RootLayout({
         <a href="#conteudo" className="skip-link">
           Pular para o conteúdo
         </a>
+        <ScrollProgress />
         {children}
       </body>
     </html>

@@ -6,6 +6,7 @@ import { Projects } from "@/components/Projects";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
+import { Reveal } from "@/components/Reveal";
 
 export default function Home() {
   return (
@@ -13,10 +14,18 @@ export default function Home() {
       <Navbar />
       <main id="conteudo" className="flex-1">
         <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <Reveal>
+          <About />
+        </Reveal>
+        <Reveal>
+          <Skills />
+        </Reveal>
+        <Reveal>
+          <Projects />
+        </Reveal>
+        <Reveal>
+          <Contact />
+        </Reveal>
       </main>
       <Footer />
       <BackToTop />
