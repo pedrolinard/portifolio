@@ -5,12 +5,13 @@ import { Skills } from "@/components/Skills";
 import { Projects } from "@/components/Projects";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { BackToTop } from "@/components/BackToTop";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="flex-1">
+      <main id="conteudo" className="flex-1">
         <Hero />
         <About />
         <Skills />
@@ -18,6 +19,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <BackToTop />
     </>
   );
 }
