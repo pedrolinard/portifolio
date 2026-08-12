@@ -5,10 +5,10 @@ const project = {
   description:
     "Gateway de autenticação em Next.js que centraliza cadastro, login e emissão de tokens JWT (par de chaves RS256) para outras aplicações consumirem como camada de identidade — incluindo um serviço em Django que valida os tokens sem ter login próprio.",
   highlights: [
-    "MFA via TOTP com QR code e 10 códigos de backup de uso único",
+    "MFA via TOTP com QR code, 10 códigos de backup de uso único e rotação de chave de criptografia",
     "Refresh token com rotação e revogação de sessão em caso de reuso",
-    "CSRF (double-submit cookie) e rate limiting contra força bruta",
-    "66 testes automatizados rodando contra um servidor Next.js real",
+    "CSRF (double-submit cookie), rate limiting e CAPTCHA (Cloudflare Turnstile) contra força bruta",
+    "88 testes automatizados rodando contra um servidor Next.js real",
   ],
   tags: ["Next.js", "TypeScript", "Django", "Prisma", "JWT / MFA", "PostgreSQL"],
   liveHref: "https://auth-gateway-kappa.vercel.app",
