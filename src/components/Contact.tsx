@@ -10,9 +10,9 @@ export function Contact() {
           Vamos conversar?
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-muted">
-          Estou aberto a oportunidades de estágio e projetos em desenvolvimento
-          back-end. Se quiser trocar uma ideia sobre tecnologia ou pedir um
-          orçamento, é só chamar.
+          Estou aberto a projetos e oportunidades em desenvolvimento back-end.
+          Se quiser trocar uma ideia sobre tecnologia ou pedir um orçamento,
+          é só chamar.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a

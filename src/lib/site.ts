@@ -1,4 +1,4 @@
-export const SITE_URL = "https://pedrolinard-portfolio.vercel.app";
+export const SITE_URL = "https://pedrolinard.vercel.app";
 
 const WHATSAPP_NUMBER = "5586999909741";
 const WHATSAPP_MESSAGE =
