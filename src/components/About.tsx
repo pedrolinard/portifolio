@@ -7,8 +7,8 @@ export function About() {
       <div className="mt-6 grid gap-10 sm:grid-cols-[1.3fr_1fr]">
         <div className="space-y-4 leading-relaxed text-muted">
           <p>
-            Sou estudante de Análise e Desenvolvimento de Sistemas (ADS), com
-            foco em desenvolvimento back-end.
+            Sou desenvolvedor back-end, cursando Análise e Desenvolvimento de
+            Sistemas (ADS).
           </p>
           <p>
             Venho desenvolvendo projetos acadêmicos e pessoais com Java

@@ -16,7 +16,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-            Estudante de ADS com foco em back-end, construindo APIs REST e
+            Desenvolvedor back-end, construindo APIs REST e
             aplicações web com Java (Spring Boot) e Python (Django) — sempre
             buscando arquitetura limpa, boas práticas e código organizado.
           </p>
