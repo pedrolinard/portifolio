@@ -1,4 +1,5 @@
-import { GithubIcon, LinkedinIcon, MailIcon } from "./icons";
+import { GithubIcon, LinkedinIcon, MailIcon, WhatsappIcon } from "./icons";
+import { WHATSAPP_HREF } from "@/lib/site";
 
 export function Hero() {
   return (
@@ -22,11 +23,13 @@ export function Hero() {
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
-              href="mailto:pedrolin4rd@gmail.com"
+              href={WHATSAPP_HREF}
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-[10px] bg-accent px-5 py-3 font-heading text-sm font-bold transition-[filter,transform] hover:-translate-y-0.5 hover:brightness-110"
               style={{ color: "var(--fixed-white)" }}
             >
-              Entrar em contato
+              <WhatsappIcon className="h-[18px] w-[18px]" /> Solicitar orçamento
             </a>
             <a
               href="https://github.com/pedrolinard"
