@@ -70,7 +70,7 @@ export function Navbar() {
             href="#contato"
             className="hidden rounded-md border border-border px-3 py-1.5 font-mono text-xs text-foreground transition-colors hover:border-accent hover:text-accent sm:inline-block"
           >
-            disponível p/ estágio
+            entre em contato
           </a>
           <ThemeToggle />
           <button
@@ -109,7 +109,7 @@ export function Navbar() {
               onClick={() => setOpen(false)}
               className="mt-1 block rounded-md border border-border px-2 py-2.5 text-center font-mono text-xs text-foreground"
             >
-              disponível p/ estágio
+              entre em contato
             </a>
           </li>
         </ul>
