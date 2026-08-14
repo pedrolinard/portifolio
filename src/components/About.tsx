@@ -36,9 +36,6 @@ export function About() {
               <span className="text-accent">formação:</span> ADS
             </li>
             <li>
-              <span className="text-accent">status:</span> estudante
-            </li>
-            <li>
               <span className="text-accent">foco:</span> back-end
             </li>
             <li>
