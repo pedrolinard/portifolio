@@ -20,6 +20,8 @@ const skillGroups: SkillGroup[] = [
     items: [
       { name: "Java", icon: "java", hoverColor: "#ED8B00", glowColor: "rgba(237, 139, 0, 0.25)" },
       { name: "Python", icon: "python", hoverColor: "#3776AB", glowColor: "rgba(55, 118, 171, 0.25)" },
+      { name: "TypeScript", icon: "ts", hoverColor: "#3178C6", glowColor: "rgba(49, 120, 198, 0.25)" },
+      { name: "JavaScript", icon: "js", hoverColor: "#F7DF1E", glowColor: "rgba(247, 223, 30, 0.25)" },
     ],
   },
   {
@@ -35,7 +37,11 @@ const skillGroups: SkillGroup[] = [
   {
     label: "Dados & redes",
     icon: DatabaseIcon,
-    items: [{ name: "Modelagem de BD" }, { name: "Redes de computadores" }],
+    items: [
+      { name: "PostgreSQL", icon: "postgres", hoverColor: "#4169E1", glowColor: "rgba(65, 105, 225, 0.25)" },
+      { name: "Modelagem de BD" },
+      { name: "Redes de computadores" },
+    ],
   },
   {
     label: "Ferramentas",
