@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon, GithubIcon, LockIcon } from "./icons";
+import { ArrowUpRightIcon, GithubIcon, LockIcon, PawIcon } from "./icons";
 import { SectionHeading } from "./SectionHeading";
 
 type Project = {
@@ -7,7 +7,7 @@ type Project = {
   description: string;
   highlights: string[];
   tags: string[];
-  liveHref: string;
+  liveHref?: string;
   codeHref: string;
 };
 
@@ -27,6 +27,22 @@ const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Django", "Prisma", "JWT / MFA", "PostgreSQL"],
     liveHref: "https://auth-gateway-kappa.vercel.app",
     codeHref: "https://github.com/pedrolinard/Auth-System",
+  },
+  {
+    title: "Clínica Veterinária API",
+    icon: PawIcon,
+    description:
+      "API REST em Spring Boot para gestão de clínica veterinária, com autenticação JWT baseada em papéis, agendamento de consultas com detecção de conflito de horário e prontuários médicos vinculados a consultas.",
+    highlights: [
+      "Autenticação JWT com controle de acesso por papel (admin, veterinário, recepcionista)",
+      "Agendamento de consultas com detecção de conflito de horário do veterinário",
+      "Prontuários médicos vinculados a consultas finalizadas",
+      "Documentação interativa da API via Swagger/OpenAPI",
+      "Seed automático de dados na primeira execução",
+      "Testes com JUnit 5 e MockMvc",
+    ],
+    tags: ["Java 21", "Spring Boot", "JWT", "PostgreSQL", "JPA", "Docker", "Swagger"],
+    codeHref: "https://github.com/pedrolinard/cllinica-veterinaria",
   },
 ];
 
@@ -114,15 +130,17 @@ export function Projects() {
                 </div>
 
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <a
-                    href={project.liveHref}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-[10px] bg-accent px-4 py-2.5 font-heading text-sm font-bold transition-[filter,transform] hover:-translate-y-0.5 hover:brightness-110"
-                    style={{ color: "var(--fixed-white)" }}
-                  >
-                    Ver demo <ArrowUpRightIcon className="h-4 w-4" />
-                  </a>
+                  {project.liveHref && (
+                    <a
+                      href={project.liveHref}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-[10px] bg-accent px-4 py-2.5 font-heading text-sm font-bold transition-[filter,transform] hover:-translate-y-0.5 hover:brightness-110"
+                      style={{ color: "var(--fixed-white)" }}
+                    >
+                      Ver demo <ArrowUpRightIcon className="h-4 w-4" />
+                    </a>
+                  )}
                   <a
                     href={project.codeHref}
                     target="_blank"

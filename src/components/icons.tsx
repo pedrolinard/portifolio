@@ -180,6 +180,18 @@ export function LockIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
+export function PawIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <ellipse cx="12" cy="16" rx="5.5" ry="4.5" />
+      <ellipse cx="4.5" cy="10.5" rx="2.2" ry="2.8" transform="rotate(-20 4.5 10.5)" />
+      <ellipse cx="19.5" cy="10.5" rx="2.2" ry="2.8" transform="rotate(20 19.5 10.5)" />
+      <ellipse cx="8.3" cy="5.8" rx="2" ry="2.6" transform="rotate(-12 8.3 5.8)" />
+      <ellipse cx="15.7" cy="5.8" rx="2" ry="2.6" transform="rotate(12 15.7 5.8)" />
+    </svg>
+  );
+}
+
 export function WrenchIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
