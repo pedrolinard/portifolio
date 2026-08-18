@@ -1,4 +1,4 @@
-export const SITE_URL = "https://pedrolinard.vercel.app";
+export const SITE_URL = "https://bytestormsistemas.vercel.app";
 
 export const COMPANY_NAME = "ByteStorm";
 export const TAGLINE = "Soluções sob medida para o seu negócio";
