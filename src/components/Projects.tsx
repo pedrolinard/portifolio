@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon, GithubIcon, LockIcon, PawIcon } from "./icons";
+import { ArrowUpRightIcon, LockIcon, PawIcon } from "./icons";
 import { SectionHeading } from "./SectionHeading";
 
 type Project = {
@@ -8,7 +8,6 @@ type Project = {
   highlights: string[];
   tags: string[];
   liveHref?: string;
-  codeHref: string;
 };
 
 const projects: Project[] = [
@@ -27,7 +26,6 @@ const projects: Project[] = [
     ],
     tags: ["Next.js", "TypeScript", "Django", "Prisma", "JWT / MFA", "PostgreSQL"],
     liveHref: "https://auth-gateway-kappa.vercel.app",
-    codeHref: "https://github.com/pedrolinard/Auth-System",
   },
   {
     title: "Clínica Veterinária API",
@@ -44,7 +42,6 @@ const projects: Project[] = [
     ],
     tags: ["Java 21", "Spring Boot", "JWT", "PostgreSQL", "JPA", "Docker", "Swagger"],
     liveHref: "https://vet-clinic-frontend.vercel.app",
-    codeHref: "https://github.com/pedrolinard/cllinica-veterinaria",
   },
 ];
 
@@ -147,14 +144,6 @@ export function Projects() {
                       Ver demo <ArrowUpRightIcon className="h-4 w-4" />
                     </a>
                   )}
-                  <a
-                    href={project.codeHref}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-[10px] border border-border px-4 py-2.5 font-heading text-sm font-bold text-foreground transition-colors hover:border-accent hover:text-accent"
-                  >
-                    <GithubIcon className="h-4 w-4" /> Ver código
-                  </a>
                 </div>
               </div>
             </article>
