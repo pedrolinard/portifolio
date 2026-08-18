@@ -3,12 +3,12 @@ import { Space_Grotesk, Overpass, Overpass_Mono } from "next/font/google";
 import Script from "next/script";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import {
+  COMPANY_NAME,
   EMAIL,
-  GITHUB_HREF,
-  LINKEDIN_HREF,
-  NAME,
+  INSTAGRAM_HREF,
   SITE_DESCRIPTION,
   SITE_URL,
+  TAGLINE,
 } from "@/lib/site";
 import "./globals.css";
 
@@ -33,22 +33,23 @@ const overpassMono = Overpass_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${NAME} — Desenvolvedor Back-End`,
-    template: `%s — ${NAME}`,
+    default: `${COMPANY_NAME} — ${TAGLINE}`,
+    template: `%s — ${COMPANY_NAME}`,
   },
   description: SITE_DESCRIPTION,
   keywords: [
-    "Pedro Linard",
-    "desenvolvedor back-end",
+    "ByteStorm",
+    "desenvolvimento de sistemas",
+    "sistemas sob medida",
+    "back-end",
     "Java",
     "Spring Boot",
     "Python",
     "Django",
     "APIs REST",
-    "portfólio",
   ],
-  authors: [{ name: NAME, url: GITHUB_HREF }],
-  creator: NAME,
+  authors: [{ name: COMPANY_NAME }],
+  creator: COMPANY_NAME,
   alternates: {
     canonical: SITE_URL,
   },
@@ -56,13 +57,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: SITE_URL,
-    siteName: `${NAME} — Portfólio`,
-    title: `${NAME} — Desenvolvedor Back-End`,
+    siteName: COMPANY_NAME,
+    title: `${COMPANY_NAME} — ${TAGLINE}`,
     description: SITE_DESCRIPTION,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${NAME} — Desenvolvedor Back-End`,
+    title: `${COMPANY_NAME} — ${TAGLINE}`,
     description: SITE_DESCRIPTION,
   },
   robots: {
@@ -78,14 +79,14 @@ export const viewport: Viewport = {
   ],
 };
 
-const personJsonLd = {
+const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: NAME,
+  "@type": "Organization",
+  name: COMPANY_NAME,
   url: SITE_URL,
-  jobTitle: "Desenvolvedor Back-End",
+  description: SITE_DESCRIPTION,
   email: `mailto:${EMAIL}`,
-  sameAs: [GITHUB_HREF, LINKEDIN_HREF],
+  sameAs: [INSTAGRAM_HREF],
 };
 
 const themeInitScript = `
@@ -115,7 +116,7 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">

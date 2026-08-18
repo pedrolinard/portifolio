@@ -1,6 +1,6 @@
-import { WhatsappIcon } from "./icons";
+import { WhatsappIcon, ZapIcon } from "./icons";
 import { SocialLinks } from "./SocialLinks";
-import { WHATSAPP_HREF } from "@/lib/site";
+import { COMPANY_NAME, TAGLINE, WHATSAPP_HREF } from "@/lib/site";
 
 export function Hero() {
   return (
@@ -9,17 +9,21 @@ export function Hero() {
         <div>
           <p className="inline-flex items-center gap-2.5 font-mono text-xs uppercase tracking-[0.14em] text-accent">
             <span className="h-0.5 w-7 rounded-full bg-accent" />
-            desenvolvedor back-end
+            desenvolvimento de sistemas sob medida
           </p>
 
           <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
-            Olá, eu sou <span className="text-accent text-glow">Pedro Linard</span>
+            <span className="text-accent text-glow">{COMPANY_NAME}</span>
           </h1>
 
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-            Desenvolvedor back-end, construindo APIs REST e
-            aplicações web com Java (Spring Boot) e Python (Django) — sempre
-            buscando arquitetura limpa, boas práticas e código organizado.
+          <p className="mt-3 max-w-xl font-heading text-lg font-semibold text-foreground sm:text-xl">
+            {TAGLINE}.
+          </p>
+
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+            Desenvolvemos sistemas sob medida com maior especialização em
+            back-end — APIs REST, arquitetura de sistemas e integração de
+            dados, usando Java (Spring Boot) e Python (Django).
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -45,8 +49,8 @@ export function Hero() {
               "0 0 0 4px var(--accent-soft), 0 30px 60px -20px var(--accent-glow)",
           }}
         >
-          <span className="font-heading text-7xl font-bold text-accent">
-            PL
+          <span className="text-accent">
+            <ZapIcon className="h-20 w-20" />
           </span>
           <span
             aria-hidden

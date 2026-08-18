@@ -162,6 +162,32 @@ export function WhatsappIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
+export function ZapIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M12.5 2 4 13.5h6.2L10.5 22 20 9.5h-6.5L12.5 2Z" />
+    </svg>
+  );
+}
+
+export function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4.2" />
+      <path d="M17.2 6.8h.01" />
+    </svg>
+  );
+}
+
 export function LockIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg

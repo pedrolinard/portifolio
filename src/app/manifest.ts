@@ -1,10 +1,10 @@
 import type { MetadataRoute } from "next";
-import { NAME, SITE_DESCRIPTION } from "@/lib/site";
+import { COMPANY_NAME, SITE_DESCRIPTION } from "@/lib/site";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${NAME} — Portfólio`,
-    short_name: NAME,
+    name: COMPANY_NAME,
+    short_name: COMPANY_NAME,
     description: SITE_DESCRIPTION,
     start_url: "/",
     display: "standalone",

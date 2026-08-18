@@ -1,19 +1,19 @@
 import { WhatsappIcon } from "./icons";
 import { SocialLinks } from "./SocialLinks";
-import { EMAIL, EMAIL_HREF, WHATSAPP_HREF } from "@/lib/site";
+import { COMPANY_NAME, EMAIL, EMAIL_HREF, WHATSAPP_HREF } from "@/lib/site";
 
 export function Contact() {
   return (
     <section id="contato" className="mx-auto max-w-5xl scroll-mt-24 px-6 py-20">
       <div className="border-glow rounded-2xl border border-border bg-surface px-8 py-14 text-center">
-        <p className="font-mono text-sm text-accent">04. contato</p>
+        <p className="font-mono text-sm text-accent">05. contato</p>
         <h2 className="mt-3 text-2xl font-bold sm:text-4xl">
           Vamos conversar?
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-muted">
-          Estou aberto a projetos e oportunidades em desenvolvimento back-end.
-          Se quiser trocar uma ideia sobre tecnologia ou pedir um orçamento,
-          é só chamar.
+          A {COMPANY_NAME} está aberta a novos projetos e parcerias em
+          desenvolvimento de sistemas sob medida. Se quiser um orçamento ou
+          trocar uma ideia, é só chamar.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a

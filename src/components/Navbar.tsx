@@ -6,6 +6,7 @@ import { CloseIcon, MenuIcon } from "./icons";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
+  { href: "#servicos", label: "Serviços" },
   { href: "#skills", label: "Skills" },
   { href: "#projetos", label: "Projetos" },
   { href: "#contato", label: "Contato" },
@@ -49,7 +50,7 @@ export function Navbar() {
     >
       <nav className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 py-4">
         <a href="#top" className="font-heading text-base font-bold text-foreground">
-          Pedro<span className="text-accent">.</span>Linard
+          Byte<span className="text-accent">Storm</span>
         </a>
         <ul className="hidden items-center gap-8 text-sm font-semibold text-muted sm:flex">
           {links.map((link) => (

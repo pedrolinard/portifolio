@@ -59,7 +59,7 @@ const skillGroups: SkillGroup[] = [
 export function Skills() {
   return (
     <section id="skills" className="mx-auto max-w-5xl scroll-mt-24 px-6 py-16">
-      <SectionHeading index="02" label="skills" title="Stack & ferramentas" />
+      <SectionHeading index="03" label="skills" title="Stack & ferramentas" />
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
         {skillGroups.map((group) => {

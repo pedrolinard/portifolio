@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { NAME, ROLE } from "@/lib/site";
+import { COMPANY_NAME, TAGLINE } from "@/lib/site";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -32,22 +32,21 @@ export default function OpengraphImage() {
             background: "#12161b",
             border: "3px solid #171c22",
             boxShadow: "0 0 0 6px rgba(76, 130, 192, 0.14)",
-            color: "#4c82c0",
-            fontSize: 56,
-            fontWeight: 700,
             marginBottom: 48,
           }}
         >
-          PL
+          <svg width="72" height="72" viewBox="0 0 24 24" fill="#4c82c0">
+            <path d="M12.5 2 4 13.5h6.2L10.5 22 20 9.5h-6.5L12.5 2Z" />
+          </svg>
         </div>
-        <div style={{ display: "flex", fontSize: 30, color: "#4c82c0", fontWeight: 600 }}>
-          {ROLE.toLowerCase()}
+        <div style={{ display: "flex", fontSize: 72, fontWeight: 700 }}>
+          {COMPANY_NAME}
         </div>
-        <div style={{ display: "flex", fontSize: 72, fontWeight: 700, marginTop: 12 }}>
-          {NAME}
+        <div style={{ display: "flex", fontSize: 34, color: "#4c82c0", fontWeight: 600, marginTop: 16 }}>
+          {TAGLINE}
         </div>
-        <div style={{ display: "flex", fontSize: 28, color: "#93a1ac", marginTop: 24 }}>
-          APIs REST e aplicações web com Java (Spring Boot) e Python (Django)
+        <div style={{ display: "flex", fontSize: 26, color: "#93a1ac", marginTop: 24 }}>
+          Sistemas sob medida com foco em back-end — Java (Spring Boot) e Python (Django)
         </div>
       </div>
     ),

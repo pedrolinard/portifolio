@@ -1,9 +1,8 @@
-import { GithubIcon, LinkedinIcon, MailIcon } from "./icons";
-import { EMAIL_HREF, GITHUB_HREF, LINKEDIN_HREF } from "@/lib/site";
+import { InstagramIcon, MailIcon } from "./icons";
+import { EMAIL_HREF, INSTAGRAM_HREF } from "@/lib/site";
 
 const links = [
-  { href: GITHUB_HREF, label: "GitHub", icon: GithubIcon, external: true },
-  { href: LINKEDIN_HREF, label: "LinkedIn", icon: LinkedinIcon, external: true },
+  { href: INSTAGRAM_HREF, label: "Instagram", icon: InstagramIcon, external: true },
   { href: EMAIL_HREF, label: "Email", icon: MailIcon, external: false },
 ];
 

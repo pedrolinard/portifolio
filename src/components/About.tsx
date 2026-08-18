@@ -1,32 +1,30 @@
 import { SectionHeading } from "./SectionHeading";
+import { COMPANY_NAME } from "@/lib/site";
 
 export function About() {
   return (
     <section id="sobre" className="mx-auto max-w-5xl scroll-mt-24 px-6 py-16">
-      <SectionHeading index="01" label="sobre" title="Quem sou eu" />
+      <SectionHeading index="01" label="sobre" title={`Quem é a ${COMPANY_NAME}`} />
 
       <div className="mt-6 grid gap-10 sm:grid-cols-[1.3fr_1fr]">
         <div className="space-y-4 leading-relaxed text-muted">
           <p>
-            Sou desenvolvedor back-end, cursando Análise e Desenvolvimento de
-            Sistemas (ADS).
+            A {COMPANY_NAME} desenvolve sistemas sob medida para o seu
+            negócio, com maior especialização em back-end: APIs REST,
+            arquitetura de sistemas e integração com banco de dados.
           </p>
           <p>
-            Venho desenvolvendo projetos acadêmicos e pessoais com Java
-            (Spring Boot) e Python (Django), com experiência em APIs REST,
-            implementação de regras de negócio, integração com banco de dados
-            e controle de versão com Git. Com Spring Boot, aprofundo
-            programação orientada a objetos, arquitetura em camadas e
-            persistência de dados com JPA; com Django, trabalho na construção
-            de sistemas web estruturados e modelagem de dados.
+            Trabalhamos com Java (Spring Boot) e Python (Django), cobrindo
+            desde a implementação de regras de negócio até persistência de
+            dados com JPA e modelagem de sistemas web estruturados —
+            aplicando boas práticas, segurança de APIs e código organizado em
+            cada projeto.
           </p>
           <p>
-            Tenho conhecimento em redes de computadores, o que fortalece minha
-            compreensão sobre comunicação entre sistemas e ambientes
-            distribuídos. Busco crescer constantemente em arquitetura de
-            software, modelagem de banco de dados, segurança de APIs e cloud
-            computing, transformando conhecimento em prática para construir
-            uma carreira sólida em back-end.
+            Por ser uma operação enxuta, a comunicação é direta com quem
+            desenvolve o seu sistema, sem intermediários — o que agiliza
+            decisões e mantém o projeto alinhado ao que o seu negócio
+            precisa.
           </p>
         </div>
 
@@ -34,14 +32,16 @@ export function About() {
           <p className="text-muted">{"// dados rápidos"}</p>
           <ul className="mt-3 space-y-2 text-foreground">
             <li>
-              <span className="text-accent">formação:</span> ADS
+              <span className="text-accent">foco:</span> back-end &amp;
+              sistemas sob medida
             </li>
             <li>
-              <span className="text-accent">foco:</span> back-end
+              <span className="text-accent">atendimento:</span> remoto, para
+              todo o Brasil
             </li>
             <li>
-              <span className="text-accent">idiomas:</span> Português
-              (nativo), Inglês (B1)
+              <span className="text-accent">diferencial:</span> comunicação
+              direta, sem intermediários
             </li>
           </ul>
         </div>

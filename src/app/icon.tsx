@@ -15,12 +15,11 @@ export default function Icon() {
           justifyContent: "center",
           borderRadius: "50%",
           background: "#12161b",
-          color: "#4c82c0",
-          fontSize: 16,
-          fontWeight: 700,
         }}
       >
-        PL
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#4c82c0">
+          <path d="M12.5 2 4 13.5h6.2L10.5 22 20 9.5h-6.5L12.5 2Z" />
+        </svg>
       </div>
     ),
     { ...size }
