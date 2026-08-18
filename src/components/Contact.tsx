@@ -6,7 +6,7 @@ export function Contact() {
   return (
     <section id="contato" className="mx-auto max-w-5xl scroll-mt-24 px-6 py-20">
       <div className="border-glow rounded-2xl border border-border bg-surface px-8 py-14 text-center">
-        <p className="font-mono text-sm text-accent">05. contato</p>
+        <p className="font-mono text-sm text-accent">04. contato</p>
         <h2 className="mt-3 text-2xl font-bold sm:text-4xl">
           Vamos conversar?
         </h2>

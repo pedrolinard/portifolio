@@ -34,7 +34,7 @@ export function Projects() {
   return (
     <section id="projetos" className="mx-auto max-w-5xl scroll-mt-24 px-6 py-16">
       <SectionHeading
-        index="04"
+        index="03"
         label="projetos"
         title={projects.length > 1 ? "Projetos que já construí" : "Um projeto que já construí"}
       />
