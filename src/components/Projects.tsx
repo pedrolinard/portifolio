@@ -18,11 +18,12 @@ const projects: Project[] = [
     description:
       "Gateway de autenticação em Next.js que centraliza cadastro, login e emissão de tokens JWT (par de chaves RS256) para outras aplicações consumirem como camada de identidade — incluindo um serviço em Django que valida os tokens sem ter login próprio.",
     highlights: [
-      "MFA via TOTP com QR code, 10 códigos de backup de uso único e rotação de chave de criptografia",
+      "MFA via TOTP com QR code, 10 códigos de backup de uso único e \"lembrar este dispositivo\" por 30 dias",
       "Refresh token com rotação e revogação de sessão em caso de reuso",
+      "Detecção de senha vazada (Have I Been Pwned) e de \"viagem impossível\" entre sessões, com alerta por e-mail",
+      "Sessões com tipo de dispositivo e localização aproximada, painel de auditoria e suspensão/exclusão de conta por admins",
       "CSRF (double-submit cookie), rate limiting e CAPTCHA (Cloudflare Turnstile) contra força bruta",
-      "Sessões ativas com tipo de dispositivo e localização aproximada, via headers de geo-IP nativos da Vercel",
-      "89 testes automatizados rodando contra um servidor Next.js real",
+      "112 testes automatizados com Vitest (servidor Next.js real) + testes E2E com Playwright",
     ],
     tags: ["Next.js", "TypeScript", "Django", "Prisma", "JWT / MFA", "PostgreSQL"],
     liveHref: "https://auth-gateway-kappa.vercel.app",
@@ -32,16 +33,17 @@ const projects: Project[] = [
     title: "Clínica Veterinária API",
     icon: PawIcon,
     description:
-      "API REST em Spring Boot para gestão de clínica veterinária, com autenticação JWT baseada em papéis, agendamento de consultas com detecção de conflito de horário e prontuários médicos vinculados a consultas.",
+      "API REST em Spring Boot para gestão de clínica veterinária, com autenticação JWT baseada em papéis, agendamento de consultas com detecção de conflito de horário e prontuários médicos vinculados a consultas — com landing page e painel administrativo consumindo a API.",
     highlights: [
       "Autenticação JWT com controle de acesso por papel (admin, veterinário, recepcionista)",
       "Agendamento de consultas com detecção de conflito de horário do veterinário",
       "Prontuários médicos vinculados a consultas finalizadas",
+      "Landing page e SPA administrativa (HTML/CSS/JS) consumindo a API, publicada separadamente na Vercel",
       "Documentação interativa da API via Swagger/OpenAPI",
-      "Seed automático de dados na primeira execução",
-      "Testes com JUnit 5 e MockMvc",
+      "Seed automático de dados e testes de integração com JUnit 5 e MockMvc",
     ],
     tags: ["Java 21", "Spring Boot", "JWT", "PostgreSQL", "JPA", "Docker", "Swagger"],
+    liveHref: "https://vet-clinic-frontend.vercel.app",
     codeHref: "https://github.com/pedrolinard/cllinica-veterinaria",
   },
 ];
