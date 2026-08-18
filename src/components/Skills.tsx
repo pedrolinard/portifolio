@@ -32,6 +32,7 @@ const skillGroups: SkillGroup[] = [
     items: [
       { name: "Spring Boot", icon: "spring", hoverColor: "#6DB33F", glowColor: "rgba(109, 179, 63, 0.25)" },
       { name: "Django", icon: "django", hoverColor: "#44B78B", glowColor: "rgba(68, 183, 139, 0.25)" },
+      { name: "Node.js", icon: "nodejs", hoverColor: "#5FA04E", glowColor: "rgba(95, 160, 78, 0.25)" },
       { name: "APIs REST" },
       { name: "JPA" },
     ],
