@@ -1,9 +1,10 @@
-import { GithubIcon, LinkedinIcon, MailIcon, WhatsappIcon } from "./icons";
+import { WhatsappIcon } from "./icons";
+import { SocialLinks } from "./SocialLinks";
 import { WHATSAPP_HREF } from "@/lib/site";
 
 export function Hero() {
   return (
-    <section id="top" className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
+    <section id="top" className="mx-auto max-w-5xl scroll-mt-24 px-6 py-16 sm:py-24">
       <div className="grid items-center gap-10 sm:grid-cols-[1.15fr_0.85fr] sm:gap-14">
         <div>
           <p className="inline-flex items-center gap-2.5 font-mono text-xs uppercase tracking-[0.14em] text-accent">
@@ -31,31 +32,7 @@ export function Hero() {
             >
               <WhatsappIcon className="h-[18px] w-[18px]" /> Solicitar orçamento
             </a>
-            <a
-              href="https://github.com/pedrolinard"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-              className="grid h-11 w-11 place-items-center rounded-[10px] border border-border bg-surface text-foreground transition-[border-color,transform] hover:-translate-y-0.5 hover:border-accent"
-            >
-              <GithubIcon className="h-[19px] w-[19px]" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/pedrolinard/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-              className="grid h-11 w-11 place-items-center rounded-[10px] border border-border bg-surface text-foreground transition-[border-color,transform] hover:-translate-y-0.5 hover:border-accent"
-            >
-              <LinkedinIcon className="h-[19px] w-[19px]" />
-            </a>
-            <a
-              href="mailto:pedrolin4rd@gmail.com"
-              aria-label="Email"
-              className="grid h-11 w-11 place-items-center rounded-[10px] border border-border bg-surface text-foreground transition-[border-color,transform] hover:-translate-y-0.5 hover:border-accent"
-            >
-              <MailIcon className="h-[19px] w-[19px]" />
-            </a>
+            <SocialLinks />
           </div>
         </div>
 

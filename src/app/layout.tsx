@@ -1,7 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Overpass, Overpass_Mono } from "next/font/google";
 import Script from "next/script";
 import { ScrollProgress } from "@/components/ScrollProgress";
+import {
+  EMAIL,
+  GITHUB_HREF,
+  LINKEDIN_HREF,
+  NAME,
+  SITE_DESCRIPTION,
+  SITE_URL,
+} from "@/lib/site";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -23,9 +31,61 @@ const overpassMono = Overpass_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pedro Linard — Desenvolvedor Back-End",
-  description:
-    "Portfólio de Pedro Linard, Desenvolvedor Back-End. Projetos, skills e contato.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${NAME} — Desenvolvedor Back-End`,
+    template: `%s — ${NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  keywords: [
+    "Pedro Linard",
+    "desenvolvedor back-end",
+    "Java",
+    "Spring Boot",
+    "Python",
+    "Django",
+    "APIs REST",
+    "portfólio",
+  ],
+  authors: [{ name: NAME, url: GITHUB_HREF }],
+  creator: NAME,
+  alternates: {
+    canonical: SITE_URL,
+  },
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: SITE_URL,
+    siteName: `${NAME} — Portfólio`,
+    title: `${NAME} — Desenvolvedor Back-End`,
+    description: SITE_DESCRIPTION,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${NAME} — Desenvolvedor Back-End`,
+    description: SITE_DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#0a0d10" },
+    { media: "(prefers-color-scheme: light)", color: "#edf1f3" },
+  ],
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: NAME,
+  url: SITE_URL,
+  jobTitle: "Desenvolvedor Back-End",
+  email: `mailto:${EMAIL}`,
+  sameAs: [GITHUB_HREF, LINKEDIN_HREF],
 };
 
 const themeInitScript = `
@@ -52,6 +112,10 @@ export default function RootLayout({
           id="theme-init"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: themeInitScript }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">

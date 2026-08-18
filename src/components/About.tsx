@@ -1,8 +1,9 @@
+import { SectionHeading } from "./SectionHeading";
+
 export function About() {
   return (
-    <section id="sobre" className="mx-auto max-w-5xl px-6 py-16">
-      <p className="font-mono text-sm text-accent">01. sobre</p>
-      <h2 className="mt-2 text-2xl font-bold sm:text-3xl">Quem sou eu</h2>
+    <section id="sobre" className="mx-auto max-w-5xl scroll-mt-24 px-6 py-16">
+      <SectionHeading index="01" label="sobre" title="Quem sou eu" />
 
       <div className="mt-6 grid gap-10 sm:grid-cols-[1.3fr_1fr]">
         <div className="space-y-4 leading-relaxed text-muted">

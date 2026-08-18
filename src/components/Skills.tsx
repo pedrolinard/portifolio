@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { CodeIcon, DatabaseIcon, ServerIcon, WrenchIcon } from "./icons";
+import { SectionHeading } from "./SectionHeading";
 
 type Skill = {
   name: string;
@@ -56,11 +58,8 @@ const skillGroups: SkillGroup[] = [
 
 export function Skills() {
   return (
-    <section id="skills" className="mx-auto max-w-5xl px-6 py-16">
-      <p className="font-mono text-sm text-accent">02. skills</p>
-      <h2 className="mt-2 text-2xl font-bold sm:text-3xl">
-        Stack &amp; ferramentas
-      </h2>
+    <section id="skills" className="mx-auto max-w-5xl scroll-mt-24 px-6 py-16">
+      <SectionHeading index="02" label="skills" title="Stack & ferramentas" />
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
         {skillGroups.map((group) => {
@@ -93,14 +92,13 @@ export function Skills() {
                     }
                   >
                     {item.icon ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
+                      <Image
                         src={`https://skillicons.dev/icons?i=${item.icon}`}
                         alt=""
                         className="skill-chip-icon h-11 w-11"
                         width={44}
                         height={44}
-                        loading="lazy"
+                        unoptimized
                       />
                     ) : (
                       <span

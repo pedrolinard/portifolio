@@ -1,4 +1,5 @@
 import { ArrowUpRightIcon, GithubIcon } from "./icons";
+import { SectionHeading } from "./SectionHeading";
 
 const project = {
   title: "Auth System",
@@ -18,11 +19,12 @@ const project = {
 
 export function Projects() {
   return (
-    <section id="projetos" className="mx-auto max-w-5xl px-6 py-16">
-      <p className="font-mono text-sm text-accent">03. projetos</p>
-      <h2 className="mt-2 text-2xl font-bold sm:text-3xl">
-        Um projeto que já construí
-      </h2>
+    <section id="projetos" className="mx-auto max-w-5xl scroll-mt-24 px-6 py-16">
+      <SectionHeading
+        index="03"
+        label="projetos"
+        title="Um projeto que já construí"
+      />
 
       <article className="card-hover mt-8 rounded-lg border border-border bg-surface p-6 sm:p-8">
         <h3 className="text-xl font-semibold text-foreground">
