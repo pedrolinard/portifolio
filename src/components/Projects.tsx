@@ -1,4 +1,10 @@
-import { ArrowUpRightIcon, LockIcon, PawIcon } from "./icons";
+import {
+  ArrowUpRightIcon,
+  CodeIcon,
+  GithubIcon,
+  LockIcon,
+  PawIcon,
+} from "./icons";
 import { SectionHeading } from "./SectionHeading";
 
 type Project = {
@@ -8,6 +14,7 @@ type Project = {
   highlights: string[];
   tags: string[];
   liveHref?: string;
+  repoHref?: string;
 };
 
 const projects: Project[] = [
@@ -23,6 +30,7 @@ const projects: Project[] = [
       "Detecção de senha vazada (Have I Been Pwned) e de \"viagem impossível\" entre sessões, com alerta por e-mail",
       "Troca de e-mail com confirmação em duas etapas: link enviado ao endereço novo antes de efetivar a mudança, com aviso de segurança para o antigo",
       "Observabilidade em produção com Rollbar, capturando erros inesperados de servidor e de cliente",
+      "Painel reorganizado em visão geral, conta e segurança, com busca administrativa, feedback por toasts, skeletons e ações otimistas",
       "Sessões com tipo de dispositivo e localização aproximada, painel de auditoria com autor da ação e suspensão/exclusão de conta por admins",
       "Autoatendimento LGPD: o titular exporta ou exclui os próprios dados sem depender de um admin",
       "CSRF (double-submit cookie), rate limiting e CAPTCHA (Cloudflare Turnstile) contra força bruta",
@@ -30,6 +38,7 @@ const projects: Project[] = [
     ],
     tags: ["Next.js", "TypeScript", "Django", "Prisma", "JWT / MFA", "WebAuthn", "PostgreSQL"],
     liveHref: "https://auth-gateway-kappa.vercel.app",
+    repoHref: "https://github.com/pedrolinard/Auth-System",
   },
   {
     title: "Clínica Veterinária API",
@@ -52,6 +61,23 @@ const projects: Project[] = [
     ],
     tags: ["Java 21", "Spring Boot", "JWT", "PostgreSQL", "JPA", "Docker", "Swagger"],
     liveHref: "https://vet-clinic-frontend.vercel.app",
+    repoHref: "https://github.com/pedrolinard/cllinica-veterinaria",
+  },
+  {
+    title: "Jean Sandes · Personal Trainer",
+    icon: CodeIcon,
+    description:
+      "Landing page comercial de página única para um personal trainer, criada para apresentar serviços, resultados e depoimentos e transformar visitas em conversas pelo formulário ou WhatsApp.",
+    highlights: [
+      "Experiência responsiva com temas claro e escuro, menu mobile acessível, animações, galeria com lightbox e carrossel de depoimentos",
+      "Formulário com validação, honeypot, limites por IP e global em função serverless, envio via Web3Forms e fallback para WhatsApp",
+      "SEO técnico com Open Graph, Twitter Cards, dados estruturados LocalBusiness/FAQ, sitemap, robots.txt e página 404",
+      "Segurança reforçada com CSP sem scripts inline, HSTS, proteção contra clickjacking e Font Awesome com verificação de integridade",
+      "Deploy contínuo no Netlify e otimizações de acessibilidade, carregamento de fontes e preferência por movimento reduzido",
+    ],
+    tags: ["HTML", "CSS", "JavaScript", "Netlify Functions", "Web3Forms", "SEO", "Acessibilidade"],
+    liveHref: "https://personaljeansandes.netlify.app",
+    repoHref: "https://github.com/pedrolinard/personal-jean",
   },
 ];
 
@@ -152,6 +178,16 @@ export function Projects() {
                       style={{ color: "var(--fixed-white)" }}
                     >
                       Ver demo <ArrowUpRightIcon className="h-4 w-4" />
+                    </a>
+                  )}
+                  {project.repoHref && (
+                    <a
+                      href={project.repoHref}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-[10px] border border-border px-4 py-2.5 font-heading text-sm font-bold text-foreground transition-[border-color,color,transform] hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+                    >
+                      <GithubIcon className="h-4 w-4" /> Ver código
                     </a>
                   )}
                 </div>
