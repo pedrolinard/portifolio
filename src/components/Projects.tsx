@@ -1,6 +1,5 @@
 import {
   ArrowUpRightIcon,
-  CodeIcon,
   LockIcon,
   PawIcon,
 } from "./icons";
@@ -58,21 +57,6 @@ const projects: Project[] = [
     ],
     tags: ["Java 21", "Spring Boot", "JWT", "PostgreSQL", "JPA", "Docker", "Swagger"],
     liveHref: "https://vet-clinic-frontend.vercel.app",
-  },
-  {
-    title: "Jean Sandes · Personal Trainer",
-    icon: CodeIcon,
-    description:
-      "Landing page comercial de página única para um personal trainer, criada para apresentar serviços, resultados e depoimentos e transformar visitas em conversas pelo formulário ou WhatsApp.",
-    highlights: [
-      "Experiência responsiva com temas claro e escuro, menu mobile acessível, animações, galeria com lightbox e carrossel de depoimentos",
-      "Formulário com validação, honeypot, limites por IP e global em função serverless, envio via Web3Forms e fallback para WhatsApp",
-      "SEO técnico com Open Graph, Twitter Cards, dados estruturados LocalBusiness/FAQ, sitemap, robots.txt e página 404",
-      "Segurança reforçada com CSP sem scripts inline, HSTS, proteção contra clickjacking e Font Awesome com verificação de integridade",
-      "Deploy contínuo no Netlify e otimizações de acessibilidade, carregamento de fontes e preferência por movimento reduzido",
-    ],
-    tags: ["HTML", "CSS", "JavaScript", "Netlify Functions", "Web3Forms", "SEO", "Acessibilidade"],
-    liveHref: "https://personaljeansandes.netlify.app",
   },
 ];
 
