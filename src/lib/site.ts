@@ -10,7 +10,7 @@ export const EMAIL_HREF = `mailto:${EMAIL}`;
 
 export const INSTAGRAM_HREF = "https://www.instagram.com/bytestorm_bs/";
 
-const WHATSAPP_NUMBER = "5586999909741";
+export const WHATSAPP_NUMBER = "5586999909741";
 const WHATSAPP_MESSAGE =
   "Olá! Vi o site da ByteStorm e gostaria de solicitar um orçamento.";
 

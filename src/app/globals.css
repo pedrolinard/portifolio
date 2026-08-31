@@ -110,6 +110,30 @@ h3 {
     0 24px 48px -24px rgba(0, 0, 0, 0.6);
 }
 
+.conversation-chip {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--background);
+  color: var(--muted);
+  padding: 0.6rem 0.85rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.conversation-chip:hover {
+  border-color: var(--accent);
+  color: var(--foreground);
+  transform: translateY(-1px);
+}
+
+.conversation-chip-active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
 .skill-chip {
   transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }

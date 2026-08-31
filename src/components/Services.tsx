@@ -10,34 +10,34 @@ type Service = {
 const services: Service[] = [
   {
     icon: ServerIcon,
-    title: "Desenvolvimento back-end",
+    title: "Uma operação mais simples",
     description:
-      "APIs REST e arquitetura de sistemas com Java (Spring Boot) e Python (Django), do zero ou evoluindo o que já existe.",
+      "Transformo processos manuais e repetitivos em sistemas que economizam tempo e reduzem erros no dia a dia.",
   },
   {
     icon: LockIcon,
-    title: "Autenticação & segurança",
+    title: "Dados protegidos",
     description:
-      "Sistemas de login, controle de acesso por papéis, tokens JWT e boas práticas de segurança de API.",
+      "Login, permissões e boas práticas de segurança para que cada pessoa acesse apenas o que precisa.",
   },
   {
     icon: CodeIcon,
-    title: "Sistemas sob medida",
+    title: "Um sistema com a sua cara",
     description:
-      "Sistemas web completos, desenhados para as regras de negócio e o fluxo real do seu negócio.",
+      "Nada de forçar sua rotina em uma ferramenta genérica: a solução acompanha as regras reais do seu negócio.",
   },
   {
     icon: DatabaseIcon,
-    title: "Dados & integrações",
+    title: "Ferramentas que conversam",
     description:
-      "Modelagem de banco de dados e integração entre serviços, com foco em consistência e desempenho.",
+      "Conecto serviços e organizo informações para evitar retrabalho, duplicidade e dados espalhados.",
   },
 ];
 
 export function Services() {
   return (
     <section id="servicos" className="mx-auto max-w-5xl scroll-mt-24 px-6 py-16">
-      <SectionHeading index="02" label="serviços" title="O que fazemos" />
+      <SectionHeading index="02" label="soluções" title="Como posso ajudar seu negócio" />
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
         {services.map((service) => {
