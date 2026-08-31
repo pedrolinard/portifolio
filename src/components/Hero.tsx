@@ -1,4 +1,5 @@
-import { WhatsappIcon, ZapIcon } from "./icons";
+import Image from "next/image";
+import { WhatsappIcon } from "./icons";
 import { SocialLinks } from "./SocialLinks";
 import { COMPANY_NAME, WHATSAPP_HREF } from "@/lib/site";
 
@@ -42,23 +43,28 @@ export function Hero() {
         </div>
 
         <div
-          className="relative mx-auto grid aspect-square w-full max-w-[280px] place-items-center overflow-hidden rounded-full border-[3px]"
+          className="relative mx-auto aspect-square w-full max-w-[320px] overflow-hidden rounded-3xl border"
           style={{
             background: "var(--surface)",
-            borderColor: "var(--surface-2)",
+            borderColor: "var(--border)",
             boxShadow:
               "0 0 0 4px var(--accent-soft), 0 30px 60px -20px var(--accent-glow)",
           }}
         >
-          <span className="text-accent">
-            <ZapIcon className="h-20 w-20" />
-          </span>
+          <Image
+            src="/bytestorm-logo.jpg"
+            alt="Logo da ByteStorm: um raio azul dentro de um círculo"
+            fill
+            priority
+            sizes="(max-width: 640px) 280px, 320px"
+            className="object-cover transition-transform duration-500 hover:scale-[1.02]"
+          />
           <span
             aria-hidden
-            className="absolute inset-0 rounded-full"
+            className="pointer-events-none absolute inset-0 rounded-3xl"
             style={{
               background:
-                "radial-gradient(circle at 30% 20%, var(--accent-soft), transparent 60%)",
+                "linear-gradient(145deg, rgba(255,255,255,0.06), transparent 35%)",
             }}
           />
         </div>
