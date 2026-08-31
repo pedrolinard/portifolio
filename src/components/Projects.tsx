@@ -1,7 +1,6 @@
 import {
   ArrowUpRightIcon,
   CodeIcon,
-  GithubIcon,
   LockIcon,
   PawIcon,
 } from "./icons";
@@ -14,7 +13,6 @@ type Project = {
   highlights: string[];
   tags: string[];
   liveHref?: string;
-  repoHref?: string;
 };
 
 const projects: Project[] = [
@@ -38,7 +36,6 @@ const projects: Project[] = [
     ],
     tags: ["Next.js", "TypeScript", "Django", "Prisma", "JWT / MFA", "WebAuthn", "PostgreSQL"],
     liveHref: "https://auth-gateway-kappa.vercel.app",
-    repoHref: "https://github.com/pedrolinard/Auth-System",
   },
   {
     title: "Clínica Veterinária API",
@@ -61,7 +58,6 @@ const projects: Project[] = [
     ],
     tags: ["Java 21", "Spring Boot", "JWT", "PostgreSQL", "JPA", "Docker", "Swagger"],
     liveHref: "https://vet-clinic-frontend.vercel.app",
-    repoHref: "https://github.com/pedrolinard/cllinica-veterinaria",
   },
   {
     title: "Jean Sandes · Personal Trainer",
@@ -77,7 +73,6 @@ const projects: Project[] = [
     ],
     tags: ["HTML", "CSS", "JavaScript", "Netlify Functions", "Web3Forms", "SEO", "Acessibilidade"],
     liveHref: "https://personaljeansandes.netlify.app",
-    repoHref: "https://github.com/pedrolinard/personal-jean",
   },
 ];
 
@@ -178,16 +173,6 @@ export function Projects() {
                       style={{ color: "var(--fixed-white)" }}
                     >
                       Ver demo <ArrowUpRightIcon className="h-4 w-4" />
-                    </a>
-                  )}
-                  {project.repoHref && (
-                    <a
-                      href={project.repoHref}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-[10px] border border-border px-4 py-2.5 font-heading text-sm font-bold text-foreground transition-[border-color,color,transform] hover:-translate-y-0.5 hover:border-accent hover:text-accent"
-                    >
-                      <GithubIcon className="h-4 w-4" /> Ver código
                     </a>
                   )}
                 </div>
