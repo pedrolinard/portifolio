@@ -19,8 +19,9 @@ const projects: Project[] = [
     title: "Auth System",
     icon: LockIcon,
     description:
-      "Gateway de autenticação em Next.js que centraliza cadastro, login e emissão de tokens JWT (par de chaves RS256) para outras aplicações consumirem como camada de identidade — incluindo um serviço em Django (sem login próprio) que valida os tokens e expõe um CRUD de projetos/tarefas isolado por usuário, com Next.js e Django compartilhando um Postgres no Supabase.",
+      "Gateway de autenticação em Next.js que centraliza cadastro, login e emissão de tokens JWT (par de chaves RS256) para outras aplicações consumirem como camada de identidade — incluindo um serviço em Django (sem login próprio) que valida os tokens e expõe um CRUD de projetos/tarefas isolado por organização, com Next.js e Django compartilhando um Postgres no Supabase.",
     highlights: [
+      "Multi-tenant: uma conta participa de várias organizações, com papel próprio por organização (dono/admin/membro), convites por e-mail e troca de organização sem pedir senha de novo",
       "MFA via TOTP com QR code, 10 códigos de backup de uso único e \"lembrar este dispositivo\" por 30 dias",
       "Login sem senha via passkeys (WebAuthn), resistente a phishing e sem precisar digitar e-mail",
       "Refresh token com rotação e revogação de sessão em caso de reuso",
