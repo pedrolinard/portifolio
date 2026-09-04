@@ -32,7 +32,7 @@ const projects: Project[] = [
       "Sessões com tipo de dispositivo e localização aproximada, painel de auditoria com autor da ação, exportação em PDF e suspensão/exclusão de conta por admins",
       "Autoatendimento LGPD: o titular exporta ou exclui os próprios dados sem depender de um admin",
       "CSRF (double-submit cookie), rate limiting e CAPTCHA (Cloudflare Turnstile) contra força bruta",
-      "193 testes automatizados: 158 com Vitest (servidor Next.js real), 6 E2E com Playwright e 29 no serviço Django (pytest), CI no GitHub Actions",
+      "221 testes automatizados: 179 com Vitest (servidor Next.js real), 6 E2E com Playwright e 36 no serviço Django (pytest), CI no GitHub Actions",
     ],
     tags: ["Next.js", "TypeScript", "Django", "Prisma", "JWT / MFA", "WebAuthn", "PostgreSQL"],
     liveHref: "https://auth-gateway-kappa.vercel.app",
