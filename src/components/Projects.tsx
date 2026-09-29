@@ -34,6 +34,7 @@ const projects: Project[] = [
       "Autoatendimento LGPD: o titular exporta ou exclui os próprios dados sem depender de um admin",
       "CSRF (double-submit cookie), rate limiting e CAPTCHA (Cloudflare Turnstile) contra força bruta",
       "Provedor de identidade multiaplicação com SDK de integração: isolamento por cliente (aplicação), chave de assinatura RS256 rotacionável via JWKS sem deploy coordenado, e-mails e páginas com a marca de cada cliente, passkeys e rate limit escopados por aplicação",
+      "Aplicações self-service: dono ou admin de uma organização cria e gerencia até 3 aplicações próprias sem depender do operador do provedor, com aprovação prévia obrigatória e cota de e-mail reduzida até ser aprovada",
       "Login hospedado via OpenID Connect (discovery, PKCE S256 obrigatório, id_token RS256), alternativa ao SDK para quem já usa uma lib OIDC pronta como next-auth/Auth.js ou Spring Security",
       "Webhooks por aplicação para eventos de conta e de organização (cadastro, MFA, exclusão, mudança de papel, transferência), com assinatura HMAC, retentativa com backoff e proteção contra SSRF",
       "387 testes automatizados: 325 com Vitest (servidor Next.js real, incluindo o SDK), 9 E2E com Playwright e 53 no serviço Django (pytest), CI no GitHub Actions",
