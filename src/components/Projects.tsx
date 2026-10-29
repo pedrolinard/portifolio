@@ -38,6 +38,7 @@ const projects: Project[] = [
       "Login hospedado via OpenID Connect (discovery, PKCE S256 obrigatório, id_token RS256), alternativa ao SDK para quem já usa uma lib OIDC pronta como next-auth/Auth.js ou Spring Security",
       "Webhooks por aplicação para eventos de conta e de organização (cadastro, MFA, exclusão, mudança de papel, transferência), com assinatura HMAC, retentativa com backoff e proteção contra SSRF",
       "387 testes automatizados: 325 com Vitest (servidor Next.js real, incluindo o SDK), 9 E2E com Playwright e 53 no serviço Django (pytest), CI no GitHub Actions",
+      "CI de segurança dedicado: CodeQL, Gitleaks e auditoria de dependências (npm audit, pip-audit) a cada PR, push na main e semanalmente, com Dependabot para atualizações",
     ],
     tags: ["Next.js", "TypeScript", "Django", "Prisma", "JWT / MFA", "OpenID Connect", "WebAuthn", "PostgreSQL"],
     liveHref: "https://auth-gateway-kappa.vercel.app",
